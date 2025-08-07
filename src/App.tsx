@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <svg
+        className="hero-svg"
+        viewBox="0 0 120 120"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="60" cy="60" r="55" fill="url(#paint0_radial)" />
+        <path d="M60 30L75 90H45L60 30Z" fill="#fff" opacity="0.8" />
+        <defs>
+          <radialGradient
+            id="paint0_radial"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientTransform="translate(60 60) scale(55)"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#ff8a00" />
+            <stop offset="1" stopColor="#e52e71" />
+          </radialGradient>
+        </defs>
+      </svg>
+      <h1>Witaj na nowej stronie!</h1>
+      <div className="subtitle">
+        To przykładowa, nowoczesna strona startowa z gradientem, grafiką SVG i
+        stylowym przyciskiem.
+        <br />
+        Miłego dnia!
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <button
+        className="main-btn"
+        onClick={() => window.open("https://github.com/LukasZaw", "_blank")}
+      >
+        Przejdź dalej
+      </button>
+    </div>
+  );
 }
 
-export default App
+export default App;
