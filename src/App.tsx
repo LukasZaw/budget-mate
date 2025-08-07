@@ -1,11 +1,9 @@
 import "./App.css";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <div>
-      <Analytics />
-
       <svg
         className="hero-svg"
         viewBox="0 0 120 120"
@@ -41,6 +39,8 @@ function App() {
       >
         Przejdź dalej
       </button>
+
+      <Analytics />
     </div>
   );
 }
