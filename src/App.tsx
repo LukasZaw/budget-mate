@@ -1,45 +1,20 @@
-import "./App.css";
 import { Analytics } from "@vercel/analytics/react";
+import BudgetPlanner from "./components/BudgetPlanner";
 
 function App() {
   return (
     <div>
-      <svg
-        className="hero-svg"
-        viewBox="0 0 120 120"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="60" cy="60" r="55" fill="url(#paint0_radial)" />
-        <path d="M60 30L75 90H45L60 30Z" fill="#fff" opacity="0.8" />
-        <defs>
-          <radialGradient
-            id="paint0_radial"
-            cx="0"
-            cy="0"
-            r="1"
-            gradientTransform="translate(60 60) scale(55)"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#ff8a00" />
-            <stop offset="1" stopColor="#e52e71" />
-          </radialGradient>
-        </defs>
-      </svg>
-      <h1>Witaj na nowej stronie!</h1>
+      <h1>Budget Mate</h1>
       <div className="subtitle">
-        To przykładowa, nowoczesna strona startowa z gradientem, grafiką SVG i
-        stylowym przyciskiem.
-        <br />
-        Miłego dnia!
+        Prosty, interaktywny planer budżetu. Dodawaj przychody i wydatki,
+        filtruj według kategorii i kontroluj bilans w czasie rzeczywistym.
       </div>
-      <button
-        className="main-btn"
-        onClick={() => window.open("https://github.com/LukasZaw", "_blank")}
-      >
-        Przejdź dalej
-      </button>
 
+      <BudgetPlanner />
+
+      <p style={{ marginTop: "2.5rem", fontSize: ".75rem", opacity: .6 }}>
+        Made by <a href="https://github.com/LukasZaw" target="_blank" rel="noreferrer">LukasZaw</a>
+      </p>
       <Analytics />
     </div>
   );
